@@ -28,6 +28,7 @@ services:
       - "8080:80"
     volumes:
       - apache_logs:/usr/local/apache2/logs
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
 
   filebeat:
     image: docker.elastic.co/beats/filebeat:8.19.11
